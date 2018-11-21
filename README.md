@@ -1,5 +1,5 @@
-# PHP reverse shell generator
-This is a small python script to generate an obfuscated php reverse shell.
+# FIDO
+FIDO is a small python script to generate an obfuscated php reverse shell and set up a full-tty listener with tab-completion.
 
 # Installing
 The script doesn't require any third-party software.
