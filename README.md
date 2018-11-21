@@ -4,7 +4,7 @@ This is a small python script to generate an obfuscated php reverse shell.
 # Installing
 The script doesn't require any third-party software.
 
-You have just to clone the repo via ``` git clone https://github.com/0blio/php-reverse-shell-generator/ ```. 
+You have just to clone the repo via ``` git clone https://github.com/0blio/FIDO/ ```. 
 
 ## Usage
 1. Generate the payload: ``` python main.py <ip> <port> <filename>```. 
